@@ -1,0 +1,129 @@
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	color: #fff;
+	font: 14px/15px Verdana, Tahoma, san-serif;
+    background-color: #215c6a;
+    position: relative;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	color: #ffffff !important;
+	text-decoration: none;
+	outline: 0;
+}
+
+a:hover, a:active {
+	color: #ccc !important;
+}
+
+td, th, p {
+	vertical-align: top;
+	text-align: left;
+}
+
+p {
+	margin-top: 0;
+}
+
+.clean {
+	clear: both;
+	display: block;
+	font: 0px/0px Verdana;
+	height: 0;
+	overflow: hidden;
+}
+
+.hidden {
+	display: none;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+}
+.navbar {
+    background-color: #132323;
+    padding: 0;
+}
+.navbar-links {
+    gap: 20px;
+    height: 100%;
+    justify-content: center;
+}
+.container .form-control {
+    font-size: 14px;
+    border-radius: 25px;
+    height: 50px;
+    margin: 5px 0px;
+}
+.container a.active {
+    font-weight: bold;
+}
+.container .nav-link {
+    display: flex;
+    align-items: center;
+}
+.search-box {
+    position: relative;
+}
+.search-button {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #016678;
+}
+
+.btn-outline-primary {
+    color: #ffffff;
+    background-color: #016678;
+    font-size: 14px;
+    border: 0;
+}
+.bi-search {
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+}
+.body-box {
+    min-height: 500px;
+   
+}
+.body-inner {
+     padding: 120px 60px 150px 130px;
+}
+.body-inner h1 {
+    font-size: 80px;
+    font-weight: bold;
+}
+.socialMedia {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    width: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    z-index: 100;
+}
+.body-box i {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.body-inner p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+.body-inner .btn {
+    font-weight: bold;
+}

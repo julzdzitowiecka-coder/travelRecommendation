@@ -19,9 +19,9 @@
                 </div>
                 <div class="navbar-nav col-lg-6" id="navbarContent">
                     <div class="d-flex navbar-links">
-                        <a class="nav-link active" href="travel_recommendation.html">Home</a>
+                        <a class="nav-link" href="travel_recommendation.html">Home</a>
                         <a class="nav-link" href="about.html">About Us</a>
-                        <a class="nav-link" href="contact.html">Contact Us</a>
+                        <a class="nav-link active" href="contact.html">Contact Us</a>
                     </div>
                 </div>
                 <form class="d-flex search-box col-lg-4">
@@ -40,15 +40,26 @@
     <div class="container body-box">
         <div class="row">
             <div class="body-inner col-lg-8">
-                <h1>Welcome to Your Travel Guide</h1>
-                <p> Discover your next adventure with our personalized travel recommendations tailored just for you.<br>
-                    Planning your next adventure? You’re in the right place. Our travel guide is designed to help you 
-                    explore the world with confidence, whether you're dreaming of a quiet weekend getaway or a journey across continents.
+                <h1>Contact</h1>
+                <p> 
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" rows="4" class="form-control" placeholder="Write your message here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-outline-primary">Send Message</button>
+                    </form>
                 </p>
-                <p>
-                    <button class="btn btn-outline-primary" type="submit">BOOK NOW</button>
-                </p>
-            
+            </div>
             <div class="result-box col-lg-4">
                 <div id="resuts">
                 
