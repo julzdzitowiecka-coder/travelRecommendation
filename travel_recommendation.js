@@ -1,5 +1,6 @@
 const SearchForm = document.getElementById('SearchForm');
 const resuts = document.getElementById('resuts');
+const contactForm = document.getElementById('contactForm');
 
 SearchForm.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -70,3 +71,9 @@ function displayResults(arrays) {
         resuts.appendChild(countryDiv);
     });
 }
+
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Thank you for contacting us! We will get back to you shortly.');
+    contactForm.reset();
+});
