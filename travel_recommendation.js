@@ -17,17 +17,38 @@ function generateReport(query) {
     .then(response => response.json())
     .then(data => {
         const countries = [];  
-        data.countries.forEach(element => {
-            const city = element.cities.find(item => item.description.toLowerCase().includes(input));
-            if (city) {
-                countries.push({
-                    country: element.country,
-                    city: city.name,
-                    description: city.description,
-                    imageUrl: city.imageUrl 
+        switch (input) {
+            case 'beaches': 
+                data.beaches.forEach(element => {
+                    countries.push({
+                        city: element.name,
+                        description: element.description,
+                        imageUrl: element.imageUrl
+                    });
+                });
+                break;
+            case 'temples': 
+                data.temples.forEach(element => {
+                    countries.push({
+                        city: element.name,
+                        description: element.description,
+                        imageUrl: element.imageUrl
+                    });
+                });
+                break;
+            default: {
+                const country = data.countries.find(item => item.name.toLowerCase().includes(input));
+                country.cities.forEach(element => {
+                    countries.push({
+                        city: element.name,
+                        description: element.description,
+                        imageUrl: element.imageUrl 
+                    });
                 });
             }
-        });
+        }
+
+        
         if (countries.length > 0)  {
             displayResults(countries);
         } else {
@@ -35,15 +56,16 @@ function generateReport(query) {
         }
     });
 }
-function displayResults(countries) {
+function displayResults(arrays) {
     resuts.innerHTML = '';
-    countries.forEach(item => {
+    arrays.forEach(item => {
         const countryDiv = document.createElement('div');
         countryDiv.classList.add('country-result');
         countryDiv.innerHTML = `
-            <h2>${item.country} - ${item.city}</h2>
-            <p>${item.description}</p>
             <img src="${item.imageUrl}" alt="${item.city}" />
+            <h2>${item.city} </h2>
+            <p>${item.description}</p>
+            <p><a href="#" class="btn btn-outline-primary">Visit</a></p>
         `;
         resuts.appendChild(countryDiv);
     });
